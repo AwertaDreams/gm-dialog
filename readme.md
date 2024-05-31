@@ -7,7 +7,7 @@ Credits are in credits.txt
 ## Requirements
 [gm-express](https://github.com/CFC-Servers/gm_express)
 
-# Api
+# Api - dialog
 ## Logging
 This is just a better print.
 ```lua
@@ -17,9 +17,10 @@ dialog.log("")
 ## Dispatch
 Dispatches a given script to the player. Pass ent if you want to use registers and do something with the entity. Scripts are the json files without the .json extension. For example: ``welcome``
 ```lua
-function dispatch(script, ply, ent)
+dialog.dispatch(script, ply, ent)
 ```
 
+Example:
 ```
 dialog.dispatch("test", LocalPlayer())
 ```
@@ -27,15 +28,30 @@ dialog.dispatch("test", LocalPlayer())
 ## Read
 Reads the script file from the DATA folder on the client.
 ```lua
-function read(script)
+dialog.read(script)
+```
+
+Example:
+```lua
+dialog.read("welcome") -- this needs to be without .json.
 ```
 
 ## showDialog
-Shows all available dialogs on the client.
+Shows all available dialogs.
 ```lua
-function showDialogs()
+dialog.showDialogs()
+```
+# Api - dialog_function
+
+Registers a dialog function.
+```lua
+dialog_function.register(name, func)
 ```
 
+Executes the dialog function.
+```lua
+dialog_function.execute(name)
+```
 
 ## Bugs
 
