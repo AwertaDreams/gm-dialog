@@ -2,7 +2,7 @@
 Credits are in credits.txt
 
 ## Showcase
-[Link to youtube](https://www.youtube.com/watch?v=sglHNx2Au5I)
+[Link to youtube](https://www.youtube.com/watch?v=VQuzde7XhVc)
 
 ## Requirements
 [gm-express](https://github.com/CFC-Servers/gm_express)
