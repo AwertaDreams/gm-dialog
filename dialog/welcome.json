@@ -1,0 +1,8 @@
+{
+    "1": {
+      "Name": "$SELF",
+      "Actor": "$SELF",
+      "Text": "Welcome to dialogue! Have a nice stay, $SELF.",
+      "Speed": 0.06
+    }
+}

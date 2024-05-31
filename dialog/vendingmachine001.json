@@ -1,0 +1,96 @@
+{
+    "1": {
+      "Name":"Vending Machine",
+      "Actor": "dialogue/vendingmachine/001",
+      "Text": "Why are you trying to talk to a vending machine, $SELF?",
+      "Speed": 0.2,
+      "Voice": "vendingmachine",
+      "Choice": {
+        "c1": "I don't know.",
+        "c2": "I'm lost, help.",
+        "c3": "I love you."
+      }
+    },
+    "c1": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "I dont know",
+        "Speed": 0.4
+      },
+      "2": {
+        "Name":"Vending Machine",
+        "Actor": "dialogue/vendingmachine/002",
+        "Text": "Beep boop.",
+        "Voice": "vendingmachine",
+        "Speed": 0.5
+      }
+    },
+    "c2": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "I'm lost, help.",
+        "Speed": 0.1
+      },
+      "2": {
+        "Name":"Vending Machine",
+        "Actor": "dialogue/vendingmachine/003",
+        "Text": "I'm not gonna help you, $SELF.\nWhat the fuck do you expect from me?\nTo be some kind of god? \nI'm only a ENT.",
+        "Voice": "vendingmachine",
+        "Speed": 0.01
+      },
+      "3": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "Geez! That's mean.",
+        "Speed": 0.1,
+        "Choice": {
+          "c4": "*Punch the shit out of him!*",
+          "c5": "*Leave*",
+          "c6": "*Idk!*"
+        }
+      }
+    },
+    "c3": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "I love you"
+      },
+      "2": {
+        "Name": "Vending Machine",
+        "Actor": "dialogue/vendingmachine/004",
+        "Text": "Aww, that's so sweet of you, $SELF.",
+        "Voice": "vendingmachine"
+      }
+    },
+    "c4": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "*You punch the vending machine, hurting yourself in process.\nMaybe don't puch stuff that's electric.*",
+        "FunctionName": "Explode"
+      },
+      "2": {
+        "Name": "Vending Machine",
+        "Actor": "dialogue/vendingmachine/000",
+        "Text": "Dumbass hahahahahahahahahaha!",
+        "Voice": "vendingmachine"
+      }
+    },
+    "c5": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "*You decide to leave.*"
+      }
+    },
+    "c6": {
+      "1": {
+        "Name": "$SELF",
+        "Actor": "$SELF",
+        "Text": "*Why did the developer even add this thing lmao.*"
+      }
+    }
+}
