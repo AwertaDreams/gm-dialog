@@ -1,0 +1,6 @@
+"dialogue"
+{
+	"title"		"dialogue"
+	"base"		""
+	"menusystem"	"1"
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "dialogue/vendingmachine/000"
+	"$translucent" 1
+}
