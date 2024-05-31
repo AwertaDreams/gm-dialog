@@ -43,9 +43,8 @@ function showDialogs()
 If the user somehow use's the entities twice, the panel gets opened twice too. 
 This can be fixed by checking if user used the entity.
 
-#### User's dont receive the dialog on initial player spawn
-I honestly don't have any idea on how to fix this. If you're bugged by this, please open a PR.
-I might fix this in future.
+### Reflection attack 
+There's a possibility for a reflection attack on init.lua.
 
 ## Json structure
 **Name**: The actor's name.  
