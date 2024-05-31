@@ -1,6 +1,7 @@
 if CLIENT then return end
 local dialogue_folder = "gamemodes/dialogue/gamemode/dialog/"
 local files, directories = file.Find(dialogue_folder .. "*", "GAME" )
+local dataTable = {}
 
 MsgC(Color(111,142,242), "[Dialog Loader]",Color(194,192,192), " Please wait, loading dialog's.\n")
 if table.Count(files) == 0 then MsgC(Color(255,0,0), " There's a error. We haven't found any dialog files.\nPlease report this to the devs.\n") return end
@@ -20,11 +21,15 @@ hook.Add( "StartCommand", "dialog/Load", function( ply, cmd )
         
         for i, _file in pairs(files) do
             MsgC(Color(111,142,242), "[Dialog Loader]", Color(194,192,192), " ",_file, "\n")
-        
-            data = file.Read(dialogue_folder .. _file, "GAME")
-            express.Send( "dialogue_file_rw", { data, _file }, ply )
-        
+            
+            local data = file.Read(dialogue_folder .. _file, "GAME")
+            table.insert(dataTable, {filename = _file, content = data})
+            
         end
+        final = util.TableToJSON(dataTable)
+
+        express.Send( "dialogue_file_rw", {final}, ply )
+
 
     end
 end)

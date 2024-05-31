@@ -3,7 +3,11 @@ include("ui/cl_init.lua")
 include("ui/dialog/cl_dialog.lua")
 
 express.Receive("dialogue_file_rw", function(data)
-    file.Write("dialog/" .. data[2], data[1])
+    dataTable = util.JSONToTable(data[1])
+
+
+    for _, fileData in ipairs(dataTable) do
+        file.Write("dialog/" .. fileData["filename"], fileData["content"])
+    end
 end)
 
-dialog.dispatch("test", LocalPlayer())

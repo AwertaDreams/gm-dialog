@@ -17,8 +17,6 @@ function dispatch(script, ply, ent)
         log("Dispatching script via serverside " .. script .. " for player " .. tostring(ply) .. " Hes about to talk to ")
         express.Send("dialog_dispatch_client", {script, ent}, ply)
     end
-
-
 end
 
 function read(script)
